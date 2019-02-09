@@ -1,12 +1,11 @@
-
 pipeline {
     agent any
-    stages ('Build Project-J'){
+    stages{
+        Stage ('Build Project-J'){
         Steps{
-            //For Linux machines only
+            /*For Linux machines only*/
             sh 'mvn clean package'
         }
-        
+        }
+         }
     }
-
-}
