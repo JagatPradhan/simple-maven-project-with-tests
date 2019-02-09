@@ -1,8 +1,8 @@
 pipeline {
     agent any
     stages{
-        Stage ('Build Project-J'){
-        Steps{
+        stage ('Build Project-J'){
+        steps{
             /*For Linux machines only*/
             sh 'mvn clean package'
         }
