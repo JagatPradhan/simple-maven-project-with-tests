@@ -3,7 +3,6 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                echo "Building the Job with MAVEN"
                 sh 'mvn clean package'
             }
         }
