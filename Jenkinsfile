@@ -20,7 +20,7 @@ pipeline{
         }
 
         stage('SonarQube Testing'){
-            step{
+            steps{
                 echo "===Static Code Analysis started=="
                 sh 'mvn clean verify sonar:sonar -Dsonar.projectName=PRADHAN -Dsonar.projectKey=PRADHAN -Dsonar.projectVersion=$BUILD_NUMBER'
             }
@@ -30,3 +30,4 @@ pipeline{
     }
     
     }
+
