@@ -4,20 +4,7 @@ pipeline{
         stage('Build'){
             steps{
                 echo "Building the Job with MAVEN"
-            }
-            steps{
                 sh 'mvn clean package'
-            }
-            post{
-                always{
-                    echo "Verifying the status"
-                }
-                success{
-                    echo "========Build executed successfully======="
-                }
-                failure{
-                    echo "========Build execution failed========"
-                }
             }
         }
 
@@ -32,3 +19,4 @@ pipeline{
     }
     
     }
+
