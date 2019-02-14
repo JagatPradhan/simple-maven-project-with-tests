@@ -1,9 +1,11 @@
 pipeline{
     agent any
     stages{
-        stage("Build"){
+        stage('Build'){
             steps{
                 echo "Building the Job with MAVEN"
+            }
+            steps{
                 sh 'mvn clean package'
             }
             post{
@@ -30,4 +32,3 @@ pipeline{
     }
     
     }
-
